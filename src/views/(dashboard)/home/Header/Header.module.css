@@ -1,0 +1,26 @@
+.header {
+  padding: var(--space-container-y) var(--space-container-x);
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px min-content;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.contentContainer {
+  animation: fadeIn 0.3s forwards;
+}
+
+.contentContainer > button {
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,55 @@
+.callToActionBanner {
+  height: 100dvh;
+  display: flex;
+  overflow: clip;
+}
+
+.text {
+  position: absolute;
+  animation: float 10s infinite linear both;
+}
+
+.circle {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  background: linear-gradient(
+    to top,
+    var(--color-primary-variant),
+    var(--color-primary)
+  );
+  animation: zoomIn forwards;
+  animation-timeline: view();
+  animation-range: 0 entry 0 cover;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(0deg); /* Inicio */
+  }
+  20% {
+    transform: translateX(30px) translateY(-30px) rotate(8deg); /* A la derecha y ligeramente hacia arriba */
+  }
+  40% {
+    transform: translateX(50px) translateY(10px) rotate(-10deg); /* Más lejos a la derecha y baja un poco */
+  }
+  60% {
+    transform: translateX(20px) translateY(-40px) rotate(12deg); /* Regresa hacia la izquierda, sube más */
+  }
+  80% {
+    transform: translateX(-30px) translateY(30px) rotate(-7deg); /* Hacia la izquierda y baja */
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) rotate(0deg); /* Vuelve a la posición inicial */
+  }
+}

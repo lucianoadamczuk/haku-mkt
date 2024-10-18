@@ -1,0 +1,31 @@
+.section {
+  min-height: 100dvh;
+  padding: var(--space-container-y) var(--space-container-x);
+  display: grid;
+  gap: var(--space-md);
+  background: linear-gradient(
+    to bottom,
+    var(--color-light),
+    var(--color-light-variant)
+  );
+}
+
+.emptyDiv {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 720px) {
+  .section {
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: start;
+  }
+  .emptyDiv {
+    display: block;
+  }
+}

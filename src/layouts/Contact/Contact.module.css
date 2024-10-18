@@ -1,0 +1,11 @@
+.section {
+  min-height: 100dvh;
+  padding: var(--space-container-y) var(--space-container-x);
+  display: grid;
+}
+
+@media (min-width: 720px) {
+  .section {
+    grid-template-columns: 1fr 1fr;
+  }
+}

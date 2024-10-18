@@ -1,0 +1,114 @@
+.card {
+  /*Box model stuff*/
+  width: 100%;
+  height: 400px;
+  /*Manipulations stuff*/
+  transform-style: preserve-3d;
+  animation: flip both;
+  /*Miscellaneous*/
+  animation-timeline: view();
+  animation-range: entry 20% cover 60%;
+  box-shadow: -1px 1px 1px var(--color-dark);
+}
+
+/* -------------------------------- frontside ------------------------------- */
+.frontside {
+  /*Display stuff*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*Box model stuff*/
+  height: 100%;
+  padding: var(--space-md) var(--space-sm);
+  background-color: var(--color-light);
+  /*Manipulations stuff*/
+  transform: rotateY(180deg);
+  /*Miscellaneous*/
+  overflow: clip;
+}
+
+.japanese {
+  /*Display stuff*/
+  display: flex;
+  flex-direction: column;
+  /*Positioning stuff*/
+  position: absolute;
+  right: var(--space-sm);
+  top: var(--space-sm);
+}
+
+.circle {
+  /*Positioning stuff*/
+  top: 0px;
+  z-index: 1;
+  /*Box model stuff*/
+  width: 10px;
+  max-width: 0 auto;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--color-light-variant);
+  /*Miscellaneous*/
+  box-shadow: inset 1px 1px var(--color-dark);
+}
+
+.textContainer {
+  /*Positioning stuff*/
+  z-index: 2;
+}
+
+.background {
+  /*Positioning stuff*/
+  position: absolute;
+  /*Manipulations stuff*/
+  opacity: 0.3;
+  /*Miscellaneous*/
+  inset: 0;
+  object-fit: cover;
+}
+
+/* -------------------------------- backside -------------------------------- */
+.backside {
+  /*Display stuff*/
+  display: flex;
+  flex-direction: column;
+  /*Positioning stuff*/
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  /*Box model stuff*/
+  width: 100%;
+  height: 400px;
+  height: 100%;
+  background-color: var(--color-bushido-dark);
+  /*Miscellaneous*/
+  backface-visibility: hidden;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    hover                                   */
+/* -------------------------------------------------------------------------- */
+
+.frontside:hover > .background {
+  /*Manipulations stuff*/
+  transform: scale(120%);
+  transition-duration: var(--duration-normal);
+}
+
+.frontside:hover > .textContainer > h5 {
+  transform: translateY(150%) scale(130%);
+  transition-duration: var(--duration-normal);
+}
+
+.frontside:hover > .textContainer > p {
+  transform: translateY(170%);
+  transition-duration: var(--duration-normal);
+  opacity: 0;
+}
+
+@keyframes flip {
+  from {
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}

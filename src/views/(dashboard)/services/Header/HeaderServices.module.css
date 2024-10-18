@@ -1,0 +1,31 @@
+.header {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.contentContainer {
+  width: 100vw;
+  height: 100dvh;
+  padding: var(--space-container-y) var(--space-container-x);
+  background: linear-gradient(
+    to top left,
+    var(--color-sakura-dark),
+    var(--color-sakura)
+  );
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .contentContainer {
+    width: 100%;
+  }
+}

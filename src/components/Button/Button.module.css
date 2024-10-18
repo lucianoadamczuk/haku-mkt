@@ -1,0 +1,68 @@
+.button {
+  /*Box model stuff*/
+  width: 100%;
+  padding: var(--space-sm) var(--space-lg);
+  border: 0px;
+  border-radius: var(--rounded-md);
+  /*Miscellaneous*/
+  cursor: pointer;
+}
+
+.button:active {
+  /*Manipulations stuff*/
+  transform: scale(0.95);
+}
+
+.longestText {
+  /*Manipulations stuff*/
+  opacity: 0;
+}
+
+.text {
+  /*Positioning stuff*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*Manipulations stuff*/
+  transform: translate(-50%, -50%);
+}
+
+.hoverText {
+  /*Positioning stuff*/
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  /*Manipulations stuff*/
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.button:hover > .text {
+  /*Positioning stuff*/
+  left: 40%;
+  /*Manipulations stuff*/
+  opacity: 0;
+}
+
+.button:hover > .hoverText {
+  /*Positioning stuff*/
+  left: 50%;
+  /*Manipulations stuff*/
+  opacity: 1;
+}
+
+/* --------------------------------- colors --------------------------------- */
+.primary {
+  /*Box model stuff*/
+  background-color: var(--color-primary);
+}
+
+@media (min-width: 720px) {
+  .button {
+    width: fit-content;
+  }
+
+  .full {
+    width: 100%;
+  }
+}

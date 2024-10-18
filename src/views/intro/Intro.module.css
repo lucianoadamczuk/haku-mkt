@@ -1,0 +1,136 @@
+.section {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-light);
+  overflow: hidden;
+}
+
+.triangle {
+  height: 100%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transform-origin: center;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+/* left */
+.triangleLeft {
+  background-color: var(--color-dark-variant);
+  opacity: 0.8;
+  z-index: 3;
+  animation:
+    enter 0.8s linear 0.3s forwards,
+    triangleLeft 0.5s linear 2s forwards,
+    triangleLeftOut 2s ease-out 3s forwards;
+}
+
+/* center */
+.triangleCenter {
+  z-index: 1;
+  background-color: var(--color-dark);
+  animation:
+    enter 0.8s linear 0.3s forwards,
+    imageCenterOut 1s ease-out 4s forwards;
+}
+
+/* right */
+.triangleRight {
+  z-index: 2;
+  opacity: 0.5;
+  background-color: var(--color-primary);
+  animation:
+    enter 0.8s linear 0.3s forwards,
+    triangleRight 0.5s linear 2s forwards,
+    triangleRightOut 2s ease-out 3s forwards;
+}
+
+/* text */
+.section > h1 {
+  z-index: 3;
+  transform: translateY(-20%);
+  animation:
+    text 1.5s ease-out 2s forwards,
+    textOut 1s ease-out 4s forwards;
+  opacity: 0;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+@keyframes triangleLeft {
+  0% {
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes triangleLeftOut {
+  0% {
+  }
+  30% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+}
+
+@keyframes triangleRight {
+  0% {
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes triangleRightOut {
+  0% {
+  }
+  30% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+}
+
+@keyframes imageCenterOut {
+  0% {
+  }
+  100% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textOut {
+  0% {
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
