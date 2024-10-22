@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 import acceptLanguage from "accept-language";
-import { fallbackLng, languages, cookieName } from "./src/app/i18n/settings";
+import { fallbackLng, languages, cookieName } from "./app/i18n/settings";
 
 acceptLanguage.languages(languages);
 
@@ -24,13 +24,13 @@ export function middleware(req: NextRequest) {
   if (!lng) lng = fallbackLng;
 
   // Redirect if lng in path is not supported
-  if (
-    !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
-    !req.nextUrl.pathname.startsWith("/_next")
-  ) {
-    return NextResponse.redirect(
-      new URL(`/${lng}${req.nextUrl.pathname}${req.nextUrl.search}`, req.url),
-    );
+  const { pathname } = req.nextUrl;
+  const pathSegments = pathname.split("/");
+  const firstSegment = pathSegments[1]; // El primer segmento después de la raíz
+
+  // Redirigir si el primer segmento no es un idioma soportado
+  if (!languages.includes(firstSegment) && !pathname.startsWith("/_next")) {
+    return NextResponse.redirect(new URL(`/${lng}`, req.url));
   }
 
   if (req.headers.has("referer")) {

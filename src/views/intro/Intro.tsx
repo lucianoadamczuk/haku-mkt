@@ -17,7 +17,7 @@ export default function Intro({ params }: Props) {
     const handleRedirect = () => {
       setTimeout(() => {
         router.push(`${params.lang}/home`);
-      }, 6500);
+      }, 7500);
     };
 
     handleRedirect();
