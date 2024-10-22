@@ -18,12 +18,56 @@ export async function generateMetadata({ params }: MetadataProps) {
   const { t } = await UseTranslation(params.lang);
   const title = t("metadata.title");
   const description = t("metadata.description");
+  const keywords = t("metadata.keywords");
   const icons = {
-    icon: "/assets/images/logo.svg",
+    icon: "/assets/images/logo.png",
+  };
+  const authors = [
+    {
+      name: "Luciano Adamczuk",
+      url: "https://www.linkedin.com/in/luciano-adamczuk-5255431a8/",
+    },
+  ];
+  const openGraph = {
+    images: "/assets/images/logo-1200x630.png",
+  };
+  const twitter = {
+    images: "/assets/images/logo-1200x600.ong",
+  };
+  const robots = {
+    index: false,
+    follow: true,
   };
 
-  return { title, description, icons };
+  return {
+    title,
+    description,
+    keywords,
+    icons,
+    authors,
+    openGraph,
+    twitter,
+    robots,
+  };
 }
+
+/* ------------------------------ fonts import ------------------------------ */
+import localFont from "next/font/local";
+const fontTitle = localFont({
+  src: "./fonts/Anton-Regular.ttf",
+  variable: "--font-family-title",
+  display: "swap",
+});
+const fontBase = localFont({
+  src: "./fonts/NotoSans-Regular.ttf",
+  variable: "--font-family-base",
+  display: "swap",
+});
+const fontJapanese = localFont({
+  src: "./fonts/NotoSansJP-Regular.ttf",
+  variable: "--font-family-japanese",
+  display: "swap",
+});
 
 interface Props {
   params: IParams;
@@ -33,7 +77,11 @@ interface Props {
 export default function RootLayout({ children, params }: Props) {
   return (
     <html lang={params.lang} dir={dir(params.lang)}>
-      <body>{children}</body>
+      <body
+        className={`${fontTitle.variable} ${fontBase.variable} ${fontJapanese.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -7,6 +7,16 @@ interface Props {
   children: ReactNode;
   params: IParams;
 }
+
+export async function generateMetadata() {
+  const robots = {
+    index: true,
+    follow: true,
+  };
+
+  return { robots };
+}
+
 export default function DashboardLayout({ children, params }: Props) {
   return (
     <>

@@ -41,31 +41,6 @@
   --space-container-x: 5%;
 }
 
-/* ------------------------------ font families ----------------------------- */
-@font-face {
-  font-family: "Anton";
-  src: url("/assets/fonts/Anton-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src: url("/assets/fonts/NotoSans-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Sans JP";
-  src: url("/assets/fonts/NotoSansJP-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
-:root {
-  --font-family-title: "Anton";
-  --font-family-base: "Noto Sans";
-  --font-family-text-jp: "Noto Sans JP";
-}
-
 /* --------------------------------- others --------------------------------- */
 :root {
   --rounded-sm: 5px;
