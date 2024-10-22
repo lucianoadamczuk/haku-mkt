@@ -48,10 +48,10 @@ export default async function About({ params }: Props) {
         // Generar propiedades aleatorias para cada burbuja
         const key = `bubble-${index}`;
         const delay = `${Math.random() * 5}s`;
-        const duration = `${10 + Math.random() * 10}s`;
+        const duration = `${5 + Math.random() * 25}s`;
         const size = `${20 + Math.random() * 80}px`;
         const left = `${Math.random() * 100}%`;
-        const top = `${Math.random() * 100}%`;
+        const top = `${Math.random() * 130 - 15}%`;
         const zIndex = Math.random() > 0.5 ? 1 : 2;
 
         const bubbleStyle = {
