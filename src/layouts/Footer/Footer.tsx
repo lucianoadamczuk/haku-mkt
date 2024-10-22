@@ -1,12 +1,11 @@
-import { Icon, Text } from "@/components";
-import styles from "./Footer.module.css";
-import { ReactNode } from "react";
-import Image from "next/image";
-import { FadeIn } from "@/animations";
-import Link from "next/link";
-import { PERSONAL_INFO } from "@/constants";
 import { UseTranslation } from "@/app/i18n/server";
+import { Icon, Logo, Text } from "@/components";
+import { PERSONAL_INFO } from "@/constants";
 import { IParams } from "@/typescript";
+import Link from "next/link";
+import { ReactNode } from "react";
+import styles from "./Footer.module.css";
+import { FadeIn } from "@/animations";
 
 interface BoxProps {
   title: string;
@@ -42,16 +41,12 @@ export default async function Footer({ params }: Props) {
 
   return (
     <footer className={styles.footer}>
-      {/* ---------------------------------- logo ---------------------------------- */}{" "}
+      {/* ---------------------------------- logo ---------------------------------- */}
       <FadeIn>
-        <Image
-          src="/assets/images/logo.svg"
-          alt="logo"
-          width={200}
-          height={200}
-        />
+        <Logo size="sm" />
       </FadeIn>
-      {/* ------------------------------- description ------------------------------ */}{" "}
+
+      {/* ------------------------------- description ------------------------------ */}
       <div className={styles.contentContainer}>
         <Box title={description}>
           <Text

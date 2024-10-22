@@ -1,13 +1,13 @@
 "use client";
+import { UseTranslation } from "@/app/i18n/client";
+import { PERSONAL_INFO } from "@/constants";
+import { IParams } from "@/typescript";
 import { ReactNode } from "react";
+import { useForm } from "react-hook-form";
+import Button from "../Button/Button";
 import Text from "../Text/Text";
 import styles from "./FormContact.module.css";
 import { FadeIn } from "@/animations";
-import Button from "../Button/Button";
-import { IParams } from "@/typescript";
-import { UseTranslation } from "@/app/i18n/client";
-import { useForm } from "react-hook-form";
-import { PERSONAL_INFO } from "@/constants";
 
 /* ------------------------------ Box component ----------------------------- */
 interface BoxProps {

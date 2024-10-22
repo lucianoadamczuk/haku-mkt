@@ -1,6 +1,6 @@
 .header {
   padding: var(--space-container-y) var(--space-container-x);
-  min-height: 100dvh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 300px min-content;

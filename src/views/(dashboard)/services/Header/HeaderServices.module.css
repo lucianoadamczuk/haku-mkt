@@ -1,7 +1,7 @@
 .contentContainer {
   width: 100%;
   height: 100%;
-  min-height: 90dvh;
+  min-height: 100vh;
   padding: var(--space-container-y) var(--space-container-x);
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@
 .image {
   width: 100%;
   height: 100%;
-  max-height: 100dvh;
+  max-height: 100vh;
 }
 
 @media (min-width: 1024px) {

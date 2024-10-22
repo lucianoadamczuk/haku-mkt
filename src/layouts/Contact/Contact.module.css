@@ -1,7 +1,7 @@
 .section {
-  min-height: 100dvh;
   padding: var(--space-container-y) var(--space-container-x);
   display: grid;
+  gap: var(--space-md);
 }
 
 @media (min-width: 720px) {

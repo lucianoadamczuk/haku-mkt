@@ -4,6 +4,7 @@ import { FadeIn } from "@/animations";
 import { IParams } from "@/typescript";
 import { UseTranslation } from "@/app/i18n/server";
 import { transformString } from "@/utilities";
+import { CSSProperties } from "react";
 
 interface Props {
   params: IParams;
@@ -29,13 +30,7 @@ export default async function About({ params }: Props) {
         return (
           <article key={key} className={styles.card}>
             <FadeIn className={styles.contentContainer}>
-              <Text
-                tag="h5"
-                family="title"
-                transform="uppercase"
-                color="primary"
-                text={pretitle}
-              />
+              <Text tag="span" family="title" color="primary" text={pretitle} />
               <Text
                 tag="h4"
                 family="title"
@@ -46,6 +41,31 @@ export default async function About({ params }: Props) {
               <Text tag="p" text={text} />
             </FadeIn>
           </article>
+        );
+      })}
+
+      {Array.from({ length: 30 }).map((_, index) => {
+        // Generar propiedades aleatorias para cada burbuja
+        const key = `bubble-${index}`;
+        const delay = `${Math.random() * 5}s`;
+        const duration = `${10 + Math.random() * 10}s`;
+        const size = `${20 + Math.random() * 80}px`;
+        const left = `${Math.random() * 100}%`;
+        const top = `${Math.random() * 100}%`;
+        const zIndex = Math.random() > 0.5 ? 1 : 2;
+
+        const bubbleStyle = {
+          width: size,
+          height: size,
+          top,
+          left,
+          animationDelay: delay,
+          animationDuration: duration,
+          zIndex,
+        } as CSSProperties;
+
+        return (
+          <div key={key} className={styles.bubble} style={bubbleStyle}></div>
         );
       })}
     </section>

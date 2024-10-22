@@ -1,5 +1,5 @@
 .section {
-  min-height: 100dvh;
+  min-height: 100vh;
   padding: var(--space-container-y) var(--space-container-x);
   display: flex;
   flex-direction: column;
@@ -8,18 +8,71 @@
     var(--color-dark-variant),
     var(--color-dark)
   );
+  overflow: clip;
 }
 
 .card {
-  min-height: 100dvh;
+  height: 70vh;
+  overflow: clip;
 }
 
 .contentContainer {
   padding: var(--space-md);
   max-width: 700px;
   background-color: var(--color-light);
+  z-index: 2;
 }
 
 .contentContainer > p {
   margin-top: var(--space-sm);
+}
+@media (min-width: 720px) {
+  .card {
+    min-height: 100vh;
+  }
+}
+
+/* --------------------------------- bubbles --------------------------------- */
+.bubble {
+  background-color: rgba(255, 255, 255, 0.123); /* Burbuja semi-transparente */
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: move 10s infinite ease-in-out;
+  z-index: 1;
+  box-shadow: inset -6px -4px 25px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  position: absolute;
+}
+
+.bubble::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.224) 60%
+  );
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(5px);
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(
+      -350vh
+    ); /* Se mueve fuera de la pantalla hacia arriba */
+  }
 }

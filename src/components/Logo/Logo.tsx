@@ -1,6 +1,9 @@
 import Text from "../Text/Text";
 import styles from "./Logo.module.css";
-export default function Logo() {
+interface Props {
+  size?: "sm" | "md";
+}
+export default function Logo({ size = "md" }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.triangle}></div>
@@ -12,9 +15,11 @@ export default function Logo() {
         color="light"
         family="title"
         transform="uppercase"
-        size="xxl"
+        size={size === "sm" ? "lg" : "xxl"}
       />
-      <div className={styles.circle}></div>
+      <div
+        className={`${styles.circle} ${size === "sm" && styles.circleSmall}`}
+      ></div>
     </div>
   );
 }

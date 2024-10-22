@@ -1,5 +1,5 @@
 .section {
-  min-height: 100dvh;
+  min-height: 100vh;
   padding: var(--space-container-y) var(--space-container-x);
   background-color: var(--color-light-variant);
   display: grid;
