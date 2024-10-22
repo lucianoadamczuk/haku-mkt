@@ -29,10 +29,26 @@ export async function generateMetadata({ params }: MetadataProps) {
     },
   ];
   const openGraph = {
-    images: "/assets/images/logo-1200x630.png",
+    images: [
+      {
+        url: "/assets/images/logo-1200x630.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
   };
+
   const twitter = {
-    images: "/assets/images/logo-1200x600.ong",
+    images: [
+      {
+        url: "/assets/images/logo-1200x600.png",
+        width: 1200,
+        height: 600,
+      },
+    ],
+
+    card: "summary_large_image",
   };
   const robots = {
     index: false,
