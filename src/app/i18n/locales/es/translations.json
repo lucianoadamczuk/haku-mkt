@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "title": "HAKU - Tu socio estratégico",
+    "description": "Somos tu aliado en marketing digital, inspirado en la filosofía Kaizen. Ofrecemos soluciones creativas y efectivas que impulsan el crecimiento continuo de tu negocio. ¡Descubre cómo podemos llevar tu marca al siguiente nivel!"
+  },
+
+  "navLinks": {
+    "home": "Inicio",
+    "about": "Acerca de nosotros",
+    "methodology": "Metodología",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+
+  "contact": {
+    "title": "Pongámonos en contacto",
+    "htTitle": "contacto",
+    "form": {
+      "fullName": "Nombre y apellido",
+      "socialMedia": "Red social de la compañía (opcional)",
+      "company": "Compañía o emprendimiento",
+      "reason": {
+        "text": "Motivo de la consulta",
+        "items": [
+          "Otros",
+          "Plan Sakura",
+          "Plan Fuji",
+          "Plan Bushido",
+          "Plan Tenka"
+        ]
+      },
+      "comment": "¿Quieres añadir algo?",
+      "error": "Campo requerido",
+      "errorURL": "Formato de URL no válido",
+      "btn": "Enviar",
+      "btnHover": "¡Vamos!",
+      "messageTemplate": "*¡Hola gente de HAKU!* (-JUMP-)(-JUMP-)👤 *Mi nombre es* {{fullName}}. (-JUMP-)💼 *Trabajo en* {{company}}. (-JUMP-){{socialMedia}} (-JUMP-)*Motivo de la consulta:* {{reason}}. (-JUMP-){{comment}} (-JUMP-)(-JUMP-) *¡Saludos!* ✨"
+    }
+  },
+
+  "footer": {
+    "description": "Descripción",
+    "contact": "contacto",
+    "socialMedias": "Redes Sociales",
+    "copyright": "HAKU | Todos los derechos reservados"
+  },
+
+  "plans": [
+    {
+      "slug": "plan-sakura",
+      "inspiration": "Inspirado en la flor de cerezo",
+      "phrase": "Florece y renace",
+      "title": "Plan Sakura",
+      "japanese": "桜プラン",
+      "description": "Ideal para quienes están dando sus primeros pasos en el mundo digital",
+      "items": [
+        {
+          "title": "Plataformas",
+          "description": "Instagram, Facebook y TikTok"
+        },
+        {
+          "title": "Contenido",
+          "description": "Enfoque en hooks que capten la atención en los primeros 3 segundos. Uso de contenido viral que motive interacciones."
+        },
+        {
+          "title": "Estrategia de captación",
+          "description": "Configuración de una campaña de bajo presupuesto en Facebook/Instagram Ads para atraer tráfico de interés hacia el perfil."
+        },
+        {
+          "title": "Anuncios básicos",
+          "description": "Campaña de bajo presupuesto en Facebook/Instagram Ads."
+        },
+        {
+          "title": "Análisis de datos mensuales",
+          "description": "Informe simple del crecimiento en seguidores, engagement (likes, comentarios, shares) y análisis básico de la audiencia."
+        }
+      ],
+      "alt": "Flor de cerezo."
+    },
+    {
+      "slug": "plan-fuji",
+      "inspiration": "Inspirado en el poderoso monte",
+      "phrase": "Escala, alcanza y establécete",
+      "title": "Plan Fuji",
+      "japanese": "富士プラン",
+      "description": "Para marcas que ya han comenzado su camino y necesitan un impulso adicional",
+      "items": [
+        {
+          "title": "Plataformas cubiertas",
+          "description": "Instagram, Facebook, TikTok, Linkedin"
+        },
+        {
+          "title": "Contenido",
+          "description": "20 publicaciones mensuales (5 por semana), incluyendo videos cortos estilo reels/TikTok y gráficos para aumentar el alcance."
+        },
+        {
+          "title": "Anuncios más avanzados",
+          "description": "Campañas de retargeting para maximizar las conversiones de aquellos que interactúan con las publicaciones orgánicas."
+        },
+        {
+          "title": "Generación de leads",
+          "description": "Uso de formularios integrados en anuncios para captar información de potenciales clientes."
+        },
+        {
+          "title": "Optimización de perfil",
+          "description": "Revisión y optimización de las bios y descripciones para mejorar la conversión de visitantes a seguidores/clientes."
+        },
+        {
+          "title": "Análisis mensual más detallado",
+          "description": "Reportes con métricas clave (CPC, CTR, leads generados) y sugerencias de mejora."
+        }
+      ],
+      "alt": "El Monte Fuji."
+    },
+    {
+      "slug": "plan-bushido",
+      "inspiration": "Inspirado en los grandes líderes samuráis",
+      "phrase": "Conquista con estrategia",
+      "title": "Plan Bushido",
+      "japanese": "武士道プラン",
+      "description": "Perfecto para quienes buscan un liderazgo sólido en el mercado",
+      "items": [
+        {
+          "title": "Plataformas cubiertas",
+          "description": "Instagram, Facebook, TikTok, LinkedIn, Google Ads."
+        },
+        {
+          "title": "Contenido",
+          "description": "25 publicaciones mensuales, con una mezcla de contenido educativo, social proof (testimonios, casos de éxito) y promociones de alto impacto."
+        },
+        {
+          "title": "Anuncios multicanal",
+          "description": "Configuración y optimización de campañas de remarketing y anuncios en Google y redes sociales con enfoque en conversión y cierre de ventas."
+        },
+        {
+          "title": "Funnel de ventas",
+          "description": "Creación y optimización de embudos de ventas automáticos, desde la captación de leads hasta la venta final, aplicando principios de escasez, urgencia y prueba social."
+        },
+        {
+          "title": "Email Marketing",
+          "description": "Configuración de secuencias automatizadas para nutrir leads, aumentando la conversión de aquellos que aún no han tomado una decisión."
+        },
+        {
+          "title": "Optimización constante",
+          "description": "Análisis semanal de campañas y ajuste continuo para maximizar ROI."
+        }
+      ],
+      "alt": "Un samurai."
+    },
+    {
+      "slug": "plan-tenka",
+      "inspiration": "Inspirado en los legendarios dragones",
+      "phrase": "Domina con fuerza",
+      "title": "Plan Tenka",
+      "japanese": "天下プラン",
+      "description": "Diseñado para quienes quieren arrasar en el mercado",
+      "items": [
+        {
+          "title": "Plataformas cubiertas",
+          "description": "Todas las anteriores, además de YouTube y podcasting para generar autoridad en la industria."
+        },
+        {
+          "title": "Contenido",
+          "description": "Colaboración con microinfluencers y embajadores de marca para amplificar el alcance."
+        },
+        {
+          "title": "Marketing de influencia",
+          "description": "Colaboración con microinfluencers y embajadores de marca para amplificar el alcance."
+        },
+        {
+          "title": "Campañas agresivas de anuncios",
+          "description": "Presupuesto significativo para campañas en múltiples plataformas, con A/B testing constante para asegurar que las creatividades más efectivas estén siempre activas."
+        },
+        {
+          "title": "Optimización de embudo de ventas",
+          "description": "Funnels de venta con seguimiento intensivo y múltiples puntos de contacto, desde ads hasta email marketing, webinars y remarketing."
+        },
+        {
+          "title": "Análisis de datos avanzado",
+          "description": "Reportes semanales de todas las métricas, con enfoque en lifetime value (LTV), customer acquisition cost (CAC) y estrategias para mejorar la retención."
+        }
+      ],
+      "alt": "Un dragón."
+    }
+  ],
+
+  "home": {
+    "header": {
+      "title": "Revoluciona tu estrategia digital",
+      "htTitle": "revoluciona",
+      "subtitle": "Aplica el método kaizen y comienza a destacar",
+      "htSubtitle": "kaizen",
+      "btn": "Contacto",
+      "btnHover": "¡Hablemos!"
+    },
+
+    "about": {
+      "slides": [
+        {
+          "pretitle": "Conoce al equipo",
+          "title": "Acerca de nosotros",
+          "text": "Somos un equipo apasionado por la mejora continua, dedicado a ofrecer estrategias digitales que se adaptan a tus necesidades y evolucionan contigo."
+        },
+        {
+          "pretitle": "Acompañando tu crecimiento",
+          "title": "Nuestro Objetivo",
+          "text": "Te ayudamos a alcanzar tus metas, mejorando cada paso de tu camino digital para que crezcas de manera sostenida y eficiente."
+        },
+        {
+          "pretitle": "Innovación y mejora",
+          "title": "Nuestra filosofía",
+          "text": "Aplicamos el método Kaizen para impulsar la innovación constante en cada proyecto, asegurando resultados que destacan en un entorno digital competitivo."
+        }
+      ]
+    },
+
+    "methodology": {
+      "title": "¿Cómo trabajamos?",
+      "htTitle": "trabajamos",
+      "items": [
+        {
+          "title": "Análisis y Estrategia",
+          "text": "Realizaremos un análisis profundo del mercado, competidores y audiencia para diseñar una estrategia digital personalizada que impulse tu marca y cumpla tus metas."
+        },
+        {
+          "title": "Presentación de Bosquejos",
+          "text": "Desarrollaremos prototipos y bocetos de las campañas y contenidos para que puedas visualizar el enfoque creativo y asegurarte de que se alineen con tu visión y objetivos antes de avanzar."
+        },
+        {
+          "title": "Creación y Ejecución de Contenidos",
+          "text": "Crearemos contenido visual, escrito y multimedia de alto impacto, y lanzaremos campañas publicitarias en plataformas clave como Google, Facebook y más, asegurando que cada acción maximice tu presencia y conecte con tu audiencia."
+        },
+        {
+          "title": "Análisis de Resultados",
+          "text": "Monitorearemos el rendimiento de las campañas y proporcionaremos informes detallados para evaluar el impacto, haciendo ajustes para maximizar el retorno de la inversión."
+        }
+      ]
+    },
+
+    "plans": {
+      "title": "Conoce nuestros planes",
+      "htTitle": "planes"
+    },
+
+    "callToActionBanner": "¡Vamos!"
+  },
+
+  "notFound": {
+    "title": "Ups, tenemos un error aqui",
+    "text": "Parece que la URL no existe",
+    "btn": "Inicio",
+    "btnHover": "¡Vamos!"
+  }
+}

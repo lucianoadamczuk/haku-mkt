@@ -1,36 +1,39 @@
-import Image from "next/image";
-import styles from "./Header.module.css";
-import { Button, Text } from "@/components";
-import { FadeIn } from "@/animations";
+import { Button, Logo, Text } from "@/components";
 
-export default function Header() {
-  const title = "Revoluciona tu estrategia digital";
-  const subtitle = "Aplica el método kaizen y comienza a destacar";
-  const button = "Contacto";
-  const buttonHover = "¡Vamos!";
+import { UseTranslation } from "@/app/i18n/server";
+import { IParams } from "@/typescript";
+import styles from "./Header.module.css";
+
+interface Props {
+  params: IParams;
+}
+export default async function Header({ params }: Props) {
+  const { t } = await UseTranslation(params.lang, "translations", {
+    keyPrefix: "home.header",
+  });
+  const title = t("title");
+  const htTitle = t("htTitle");
+  const subtitle = t("subtitle");
+  const button = t("btn");
+  const buttonHover = t("btnHover");
 
   return (
-    <header className={styles.header}>
-      <Image
-        src="/assets/images/logo.svg"
-        alt="logo"
-        width={100}
-        height={100}
-        className={styles.image}
-      />
+    <header className={styles.header} id="home">
+      <Logo />
 
-      <FadeIn className={styles.contentContainer}>
+      <div className={styles.contentContainer}>
         <Text
           tag="h1"
           family="title"
           size="xxl"
           transform="uppercase"
+          htText={htTitle}
           text={title}
         />
-        <Text tag="h2" size="lg" transform="uppercase" text={subtitle} />
+        <Text tag="h2" size="md" transform="uppercase" text={subtitle} />
 
-        <Button text={button} hoverText={buttonHover} />
-      </FadeIn>
+        <Button text={button} hoverText={buttonHover} href="#contact" />
+      </div>
     </header>
   );
 }

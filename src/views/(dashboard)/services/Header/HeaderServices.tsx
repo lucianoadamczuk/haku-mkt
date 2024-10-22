@@ -2,73 +2,105 @@ import { Text } from "@/components";
 import styles from "./HeaderServices.module.css";
 import Image from "next/image";
 
-interface Props {
+interface PartialProps {
   text: string;
+  slug?: string;
 }
 
-/* -------------------------------- pretitle -------------------------------- */
-const PreTitle = ({ text }: Props) => {
-  return (
-    <Text
-      tag="span"
-      size="md"
-      color="light"
-      transform="uppercase"
-      text={text}
-    />
-  );
-};
-
 /* ---------------------------------- title --------------------------------- */
-const Title = ({ text }: Props) => {
+const Title = ({ text, slug }: PartialProps) => {
+  const splitedText = text.split(" ");
   return (
-    <Text
-      tag="h1"
-      family="title"
-      color="light"
-      size="xxxl"
-      transform="uppercase"
-      text={text}
-    />
+    <h1 className={styles.title}>
+      {splitedText[0]} <br />
+      <span
+        style={{
+          padding: "0 20px",
+          backgroundColor: "var(--color-light)",
+          color: `var(--color-${slug})`,
+        }}
+      >
+        {splitedText[1]}
+      </span>
+    </h1>
   );
 };
 
 /* --------------------------------- phrase --------------------------------- */
-const Phrase = ({ text }: Props) => {
+const Phrase = ({ text }: PartialProps) => {
   return (
     <Text
       tag="h2"
       family="title"
       color="light"
-      size="xl"
+      size="lg"
       transform="uppercase"
+      className={styles.phrase}
+      text={text}
+    />
+  );
+};
+
+/* -------------------------------- inspiration -------------------------------- */
+const Inspiration = ({ text }: PartialProps) => {
+  return (
+    <Text
+      tag="span"
+      size="sm"
+      color="light"
+      transform="uppercase"
+      className={styles.inspiration}
       text={text}
     />
   );
 };
 
 /* ------------------------------- description ------------------------------ */
-const Description = ({ text }: Props) => {
+const Description = ({ text }: PartialProps) => {
   return (
     <Text tag="p" size="md" color="light" transform="uppercase" text={text} />
   );
 };
 
-export default function HeaderServices() {
+interface Props {
+  slug: string;
+  inspiration: string;
+  title: string;
+  phrase: string;
+  description: string;
+  src: string;
+  alt: string;
+}
+
+export default function HeaderServices({
+  slug,
+  inspiration,
+  title,
+  phrase,
+  description,
+  src,
+  alt,
+}: Props) {
   return (
     <header className={styles.header}>
-      <div className={styles.contentContainer}>
-        <PreTitle text="Lorem ipsum dolor" />
-        <Title text="plan sakura" />
-        <Phrase text="Florece y renace" />
-        <Description text='"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, aliquid?' />
+      <div
+        className={styles.contentContainer}
+        style={{
+          background: `linear-gradient(to bottom , var(--color-${slug}), var(--color-${slug}-dark)`,
+        }}
+      >
+        <Title text={title} slug={slug} />
+        <Phrase text={phrase} />
+        <Inspiration text={inspiration} />
+        <Description text={description} />
       </div>
 
       <Image
-        src="/assets/images/services/plan-sakura.svg"
-        alt="image"
+        src={src}
+        alt={alt}
         width={100}
         height={100}
+        priority
         className={styles.image}
       />
     </header>

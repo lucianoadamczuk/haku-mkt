@@ -1,14 +1,25 @@
+/* -------------------------------- plancard -------------------------------- */
 .card {
   /*Box model stuff*/
   width: 100%;
   height: 400px;
   /*Manipulations stuff*/
   transform-style: preserve-3d;
-  animation: flip both;
   /*Miscellaneous*/
+  animation: flip;
+  animation-fill-mode: both;
   animation-timeline: view();
-  animation-range: entry 20% cover 60%;
+  animation-range: entry 50% cover 60%;
   box-shadow: -1px 1px 1px var(--color-dark);
+  cursor: pointer;
+}
+
+@keyframes flip {
+  from {
+  }
+  to {
+    transform: rotateY(180deg);
+  }
 }
 
 /* -------------------------------- frontside ------------------------------- */
@@ -79,15 +90,11 @@
   width: 100%;
   height: 400px;
   height: 100%;
-  background-color: var(--color-bushido-dark);
   /*Miscellaneous*/
   backface-visibility: hidden;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                    hover                                   */
-/* -------------------------------------------------------------------------- */
-
+/* ---------------------------------- hover --------------------------------- */
 .frontside:hover > .background {
   /*Manipulations stuff*/
   transform: scale(120%);
@@ -95,7 +102,7 @@
 }
 
 .frontside:hover > .textContainer > h5 {
-  transform: translateY(150%) scale(130%);
+  transform: translateY(100%) scale(130%);
   transition-duration: var(--duration-normal);
 }
 
@@ -103,12 +110,4 @@
   transform: translateY(170%);
   transition-duration: var(--duration-normal);
   opacity: 0;
-}
-
-@keyframes flip {
-  from {
-  }
-  to {
-    transform: rotateY(180deg);
-  }
 }

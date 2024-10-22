@@ -1,26 +1,41 @@
 import { Text } from "@/components";
 import styles from "./Methodology.module.css";
 import { FadeIn } from "@/animations";
+import { UseTranslation } from "@/app/i18n/server";
+import { IParams } from "@/typescript";
+import { transformString } from "@/utilities";
 
-export default function Methodology() {
-  const title = "¿Cómo trabajamos?";
-  const text =
-    "Realizaremos un análisis profundo del mercado, competidores y audiencia para diseñar una estrategia digital personalizada que impulse tu marca y cumpla tus metas.";
+interface Props {
+  params: IParams;
+}
+export default async function Methodology({ params }: Props) {
+  /* ------------------------------ translations ------------------------------ */
+  const { t } = await UseTranslation(params.lang, "translations", {
+    keyPrefix: "home.methodology",
+  });
+
+  const title = t("title", { ns: "translations" });
+  const htTitle = t("htTitle", { ns: "translations" });
+  const items = t("items", { ns: "translations", returnObjects: true });
+
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="methodology">
       <div>
         <Text
           tag="h3"
           family="title"
           size="xxl"
           transform="uppercase"
+          htText={htTitle}
           text={title}
         />
       </div>
 
       <div className={styles.contentContainer}>
-        {Array.from({ length: 4 }).map((item, index) => {
-          const key = `item-with-index-${index}`;
+        {items.map((item, index) => {
+          const key = transformString(item.text);
+          const title = item.title;
+          const text = item.text;
           const number = (index + 1).toString();
 
           return (
@@ -41,7 +56,7 @@ export default function Methodology() {
                   size="xl"
                   transform="uppercase"
                   color="primary"
-                  text="title"
+                  text={title}
                 />
                 <Text tag="p" text={text} />
               </div>

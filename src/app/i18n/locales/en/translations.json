@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "title": "HAKU - Your Strategic Partner",
+    "description": "We are your digital marketing ally, inspired by the Kaizen philosophy. We offer creative and effective solutions that drive the continuous growth of your business. Discover how we can take your brand to the next level!"
+  },
+
+  "navLinks": {
+    "home": "Home",
+    "about": "About Us",
+    "methodology": "Methodology",
+    "services": "Services",
+    "contact": "Contact"
+  },
+
+  "contact": {
+    "title": "Let's Get in Touch",
+    "htTitle": "touch",
+    "form": {
+      "fullName": "Full Name",
+      "socialMedia": "Company's Social Media (optional)",
+      "company": "Company or Startup",
+      "reason": {
+        "text": "Reason for Inquiry",
+        "items": [
+          "Other",
+          "Sakura Plan",
+          "Fuji Plan",
+          "Bushido Plan",
+          "Tenka Plan"
+        ]
+      },
+      "comment": "Would you like to add anything?",
+      "error": "Field required",
+      "errorURL": "Invalid URL format",
+      "btn": "Send",
+      "btnHover": "Let's Go!",
+      "messageTemplate": "*Hello HAKU team!* (-JUMP-)(-JUMP-)👤 *My name is* {{fullName}}. (-JUMP-)💼 *I work at* {{company}}. (-JUMP-){{socialMedia}} (-JUMP-)*Reason for inquiry:* {{reason}}. (-JUMP-){{comment}} (-JUMP-)(-JUMP-) *Best regards!* ✨"
+    }
+  },
+
+  "footer": {
+    "description": "Description",
+    "contact": "Contact",
+    "socialMedias": "Social Medias",
+    "copyright": "HAKU | All Rights Reserved"
+  },
+
+  "plans": [
+    {
+      "slug": "plan-sakura",
+      "inspiration": "Inspired by the cherry blossom",
+      "phrase": "Bloom and Rebirth",
+      "title": "Sakura Plan",
+      "japanese": "桜プラン",
+      "description": "Ideal for those taking their first steps in the digital world",
+      "items": [
+        {
+          "title": "Platforms",
+          "description": "Instagram, Facebook, and TikTok"
+        },
+        {
+          "title": "Content",
+          "description": "Focus on hooks that capture attention within the first 3 seconds. Use of viral content to encourage interactions."
+        },
+        {
+          "title": "Acquisition Strategy",
+          "description": "Setup of a low-budget campaign on Facebook/Instagram Ads to drive traffic of interest to the profile."
+        },
+        {
+          "title": "Basic Ads",
+          "description": "Low-budget campaign on Facebook/Instagram Ads."
+        },
+        {
+          "title": "Monthly Data Analysis",
+          "description": "Simple report on follower growth, engagement (likes, comments, shares), and basic audience analysis."
+        }
+      ],
+      "alt": "Cherry blossom."
+    },
+    {
+      "slug": "plan-fuji",
+      "inspiration": "Inspired by the mighty mountain",
+      "phrase": "Climb, Reach, and Establish",
+      "title": "Fuji Plan",
+      "japanese": "富士プラン",
+      "description": "For brands that have already begun their journey and need an additional boost",
+      "items": [
+        {
+          "title": "Covered Platforms",
+          "description": "Instagram, Facebook, TikTok, LinkedIn"
+        },
+        {
+          "title": "Content",
+          "description": "20 monthly posts (5 per week), including short videos like reels/TikTok and graphics to increase reach."
+        },
+        {
+          "title": "More Advanced Ads",
+          "description": "Retargeting campaigns to maximize conversions from those interacting with organic posts."
+        },
+        {
+          "title": "Lead Generation",
+          "description": "Use of integrated forms in ads to capture potential client information."
+        },
+        {
+          "title": "Profile Optimization",
+          "description": "Review and optimization of bios and descriptions to improve the conversion of visitors into followers/clients."
+        },
+        {
+          "title": "More Detailed Monthly Analysis",
+          "description": "Reports with key metrics (CPC, CTR, leads generated) and improvement suggestions."
+        }
+      ],
+      "alt": "Mount Fuji."
+    },
+    {
+      "slug": "plan-bushido",
+      "inspiration": "Inspired by the great samurai leaders",
+      "phrase": "Conquer with Strategy",
+      "title": "Bushido Plan",
+      "japanese": "武士道プラン",
+      "description": "Perfect for those seeking solid market leadership",
+      "items": [
+        {
+          "title": "Covered Platforms",
+          "description": "Instagram, Facebook, TikTok, LinkedIn, Google Ads."
+        },
+        {
+          "title": "Content",
+          "description": "25 monthly posts, with a mix of educational content, social proof (testimonials, success stories), and high-impact promotions."
+        },
+        {
+          "title": "Multichannel Ads",
+          "description": "Setup and optimization of remarketing campaigns and ads on Google and social networks focused on conversion and sales closure."
+        },
+        {
+          "title": "Sales Funnel",
+          "description": "Creation and optimization of automatic sales funnels, from lead generation to the final sale, applying scarcity, urgency, and social proof principles."
+        },
+        {
+          "title": "Email Marketing",
+          "description": "Setup of automated sequences to nurture leads, increasing the conversion of those who haven't made a decision yet."
+        },
+        {
+          "title": "Constant Optimization",
+          "description": "Weekly campaign analysis and continuous adjustments to maximize ROI."
+        }
+      ],
+      "alt": "A samurai."
+    },
+    {
+      "slug": "plan-tenka",
+      "inspiration": "Inspired by legendary dragons",
+      "phrase": "Dominate with Strength",
+      "title": "Tenka Plan",
+      "japanese": "天下プラン",
+      "description": "Designed for those who want to dominate the market",
+      "items": [
+        {
+          "title": "Covered Platforms",
+          "description": "All of the above, plus YouTube and podcasting to generate industry authority."
+        },
+        {
+          "title": "Content",
+          "description": "Collaboration with micro-influencers and brand ambassadors to amplify reach."
+        },
+        {
+          "title": "Influence Marketing",
+          "description": "Collaboration with micro-influencers and brand ambassadors to amplify reach."
+        },
+        {
+          "title": "Aggressive Ad Campaigns",
+          "description": "Significant budget for campaigns across multiple platforms, with constant A/B testing to ensure the most effective creatives are always active."
+        },
+        {
+          "title": "Sales Funnel Optimization",
+          "description": "Sales funnels with intensive follow-up and multiple touchpoints, from ads to email marketing, webinars, and remarketing."
+        },
+        {
+          "title": "Advanced Data Analysis",
+          "description": "Weekly reports of all metrics, focusing on lifetime value (LTV), customer acquisition cost (CAC), and strategies to improve retention."
+        }
+      ],
+      "alt": "A dragon."
+    }
+  ],
+
+  "home": {
+    "header": {
+      "title": "Revolutionize Your Digital Strategy",
+      "htTitle": "revolutionize",
+      "subtitle": "Apply the Kaizen method and start standing out",
+      "htSubtitle": "kaizen",
+      "btn": "Contact",
+      "btnHover": "Let's Talk!"
+    },
+
+    "about": {
+      "slides": [
+        {
+          "pretitle": "Meet the Team",
+          "title": "About Us",
+          "text": "We are a team passionate about continuous improvement, dedicated to offering digital strategies that adapt to your needs and evolve with you."
+        },
+        {
+          "pretitle": "Supporting Your Growth",
+          "title": "Our Goal",
+          "text": "We help you achieve your goals, improving every step of your digital journey so that you grow sustainably and efficiently."
+        },
+        {
+          "pretitle": "Innovation and Improvement",
+          "title": "Our Philosophy",
+          "text": "We apply the Kaizen method to drive constant innovation in every project, ensuring results that stand out in a competitive digital environment."
+        }
+      ]
+    },
+
+    "methodology": {
+      "title": "How Do We Work?",
+      "htTitle": "work",
+      "items": [
+        {
+          "title": "Analysis and Strategy",
+          "text": "We will perform a thorough analysis of the market, competitors, and audience to design a personalized digital strategy that drives your brand and meets your goals."
+        },
+        {
+          "title": "Presentation of Drafts",
+          "text": "We will develop prototypes and sketches of campaigns and content so you can visualize the creative approach and ensure it aligns with your vision and objectives before moving forward."
+        },
+        {
+          "title": "Content Creation and Execution",
+          "text": "We will create high-impact visual, written, and multimedia content, launching advertising campaigns on key platforms like Google, Facebook, and more, ensuring that every action maximizes your presence and connects with your audience."
+        },
+        {
+          "title": "Results Analysis",
+          "text": "We will monitor the performance of campaigns and provide detailed reports to assess the impact, making adjustments to maximize return on investment."
+        }
+      ]
+    },
+    "plans": {
+      "title": "Check out our plans",
+      "htTitle": "plans"
+    },
+
+    "callToActionBanner": "Let's go!"
+  },
+
+  "notFound": {
+    "title": "Oops, we have an error here",
+    "text": "It seems the URL doesn't exist",
+    "btn": "Home",
+    "btnHover": "Let's go!"
+  }
+}

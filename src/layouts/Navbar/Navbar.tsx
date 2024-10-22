@@ -1,9 +1,18 @@
 "use client";
+import { UseTranslation } from "@/app/i18n/client";
+import { languages } from "@/app/i18n/settings";
+import { Icon, Text } from "@/components";
+import { IParams } from "@/typescript";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
-import Link from "next/link";
-import { Icon, Text } from "@/components";
-export default function Navbar() {
+import { usePathname } from "next/navigation";
+
+interface Props {
+  params: IParams;
+}
+
+export default function Navbar({ params }: Props) {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   useEffect(() => {
     function handleScroll() {
@@ -21,31 +30,46 @@ export default function Navbar() {
   }, []);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const links = [
-    {
-      name: "anchot",
-      pathname: "pathname",
+
+  /* ------------------------------ translations ------------------------------ */
+  const { t } = UseTranslation(params.lang);
+  const links = {
+    home: {
+      name: t("navLinks.home"),
+      href: "#home",
     },
-    {
-      name: "anchot",
-      pathname: "pathname",
+    about: {
+      name: t("navLinks.about"),
+      href: "#about",
     },
-    {
-      name: "anchot",
-      pathname: "pathname",
+    methodology: {
+      name: t("navLinks.methodology"),
+      href: "#methodology",
     },
-    {
-      name: "anchot",
-      pathname: "pathname",
+    services: {
+      name: t("navLinks.services"),
+      href: "#services",
     },
-  ];
-  const langauges = ["es", "en"];
-  const param = "es";
+    contact: {
+      name: t("navLinks.contact"),
+      href: "#contact",
+    },
+  };
+
+  const pathname = usePathname();
+
   return (
     <nav
       className={styles.nav}
       style={{
-        backgroundColor: isScrolled ? "var(--color-dark)" : "transparent",
+        backgroundColor:
+          isOpen && isScrolled
+            ? "var(--color-dark)"
+            : isOpen && !isScrolled
+              ? "var(--color-light)"
+              : !isOpen && isScrolled
+                ? "var(--color-dark)"
+                : "transparent",
       }}
     >
       <Text
@@ -67,9 +91,12 @@ export default function Navbar() {
         }}
       >
         {/* ---------------------------------- links --------------------------------- */}
-        {links.map((link) => {
-          const key = `nav-link-${link.pathname}`;
-          const href = link.pathname;
+        {Object.values(links).map((link) => {
+          const key = `nav-link-${link.href}`;
+          const href =
+            link.href === "#contact"
+              ? `${link.href}`
+              : `/${params.lang}/home/${link.href}`;
           const text = link.name;
 
           return (
@@ -90,10 +117,16 @@ export default function Navbar() {
 
         {/* ---------------------------- language switcher --------------------------- */}
         <div>
-          {langauges.map((lang, index) => {
+          {languages.map((lang, index) => {
             const key = `lang-link-${lang}`;
             const text = lang;
-            const href = lang;
+            const currentPathname = pathname
+              .split("/")
+              .filter(Boolean)
+              .slice(1)
+              .join("/");
+            const href = `/${lang}/${currentPathname}`;
+
             return (
               <React.Fragment key={key}>
                 <Link href={href} className={styles.anchor}>
@@ -101,14 +134,18 @@ export default function Navbar() {
                     tag="span"
                     family="title"
                     color={
-                      param === lang ? "primary" : isScrolled ? "light" : "dark"
+                      params.lang === lang
+                        ? "primary"
+                        : isScrolled
+                          ? "light"
+                          : "dark"
                     }
                     transform="uppercase"
                     text={text}
                   />
                 </Link>
                 {/* Add a slash if it is not the last element */}
-                {index < langauges.length - 1 && (
+                {index < languages.length - 1 && (
                   <Text
                     tag="span"
                     family="title"

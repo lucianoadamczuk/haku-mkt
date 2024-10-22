@@ -1,3 +1,23 @@
+/* -------------------------------------------------------------------------- */
+/*                             animation variables                            */
+/* -------------------------------------------------------------------------- */
+.section {
+  --triangle-enter: 0.5s linear forwards 1s;
+
+  --triangle-move: 0.5s ease-out forwards 2s;
+  --text-and-circle-enter: 0.5s linear forwards 2s;
+
+  --triangle-resize: 1s ease-out forwards 2.6s;
+
+  --section-blink: 1.5s ease-in-out 3.5s 2;
+
+  --triangle-out: 0.5s ease-out forwards 6.5s;
+  --triangle-center-out: 0.5s ease-out forwards 7s;
+  --text-out: 0.5s ease-out forwards 7s;
+
+  --section-blur: 0.2s linear forwards 7s;
+}
+
 .section {
   width: 100%;
   height: 100dvh;
@@ -6,131 +26,200 @@
   align-items: center;
   background-color: var(--color-light);
   overflow: hidden;
+  animation:
+    blink var(--section-blink),
+    blur var(--section-blur);
 }
 
 .triangle {
-  height: 100%;
-  aspect-ratio: 1/1;
+  width: 80%;
+  max-width: 350px;
   position: absolute;
+  aspect-ratio: 1/1;
   transform-origin: center;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
+  opacity: 0;
 }
 
-/* left */
 .triangleLeft {
+  z-index: 2;
   background-color: var(--color-dark-variant);
-  opacity: 0.8;
-  z-index: 3;
   animation:
-    enter 0.8s linear 0.3s forwards,
-    triangleLeft 0.5s linear 2s forwards,
-    triangleLeftOut 2s ease-out 3s forwards;
+    enter var(--triangle-enter),
+    triLeftMove var(--triangle-move),
+    triLeftResize var(--triangle-resize),
+    triLeftOut var(--triangle-out);
 }
 
-/* center */
 .triangleCenter {
-  z-index: 1;
   background-color: var(--color-dark);
   animation:
-    enter 0.8s linear 0.3s forwards,
-    imageCenterOut 1s ease-out 4s forwards;
+    enter var(--triangle-enter),
+    triangleCenterOut var(--triangle-center-out);
 }
 
-/* right */
 .triangleRight {
-  z-index: 2;
-  opacity: 0.5;
   background-color: var(--color-primary);
   animation:
-    enter 0.8s linear 0.3s forwards,
-    triangleRight 0.5s linear 2s forwards,
-    triangleRightOut 2s ease-out 3s forwards;
+    enter var(--triangle-enter),
+    triRightMove var(--triangle-move),
+    triRightResize var(--triangle-resize),
+    triRightOut var(--triangle-out);
 }
 
-/* text */
-.section > h1 {
-  z-index: 3;
-  transform: translateY(-20%);
-  animation:
-    text 1.5s ease-out 2s forwards,
-    textOut 1s ease-out 4s forwards;
+.title {
   opacity: 0;
+  z-index: 3;
+  animation:
+    text-enter var(--text-and-circle-enter),
+    text-out var(--text-out);
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-light);
+  border-radius: 100%;
+  position: absolute;
+  top: 40%;
+  z-index: 4;
+  opacity: 0;
+  animation: circle-enter var(--text-and-circle-enter);
 }
 
 @keyframes enter {
   0% {
     opacity: 0;
-    transform: scale(0);
+    scale: 0;
   }
   100% {
     opacity: 0.8;
-    transform: scale(1);
+    scale: 1;
   }
 }
 
-@keyframes triangleLeft {
-  0% {
-  }
-  100% {
-    transform: translateX(-20px);
+/* ------------------------------ left triangle ----------------------------- */
+@keyframes triLeftMove {
+  to {
+    transform: translateX(-4%);
   }
 }
 
-@keyframes triangleLeftOut {
-  0% {
+@keyframes triLeftResize {
+  from {
+    transform-origin: top left;
   }
-  30% {
-    transform: rotate(90deg);
+  to {
+    transform-origin: top left;
+    scale: 0.8;
+  }
+}
+
+@keyframes triLeftOut {
+  0% {
+    transform-origin: center center;
+  }
+  40% {
+    transform-origin: center center;
+    rotate: 90deg;
+    translate: 0 0;
   }
   100% {
-    transform: translateX(-150%);
+    transform-origin: center center;
+    rotate: 90deg;
+    translate: -100% 0;
     opacity: 0;
   }
 }
 
-@keyframes triangleRight {
-  0% {
-  }
-  100% {
-    transform: translateX(20px);
-  }
-}
-
-@keyframes triangleRightOut {
-  0% {
-  }
-  30% {
-    transform: rotate(-90deg);
-  }
-  100% {
-    transform: translateX(150%);
+/* ----------------------------- center triangle ---------------------------- */
+@keyframes triangleCenterOut {
+  to {
+    translate: 0 60%;
     opacity: 0;
   }
 }
 
-@keyframes imageCenterOut {
+/* ----------------------------- right triangle ----------------------------- */
+@keyframes triRightMove {
+  to {
+    transform: translateX(4%);
+  }
+}
+
+@keyframes triRightResize {
+  from {
+    transform-origin: top right;
+  }
+  to {
+    transform-origin: top right;
+    scale: 0.9;
+  }
+}
+
+@keyframes triRightOut {
   0% {
+    transform-origin: center center;
+  }
+  40% {
+    transform-origin: center center;
+    rotate: -90deg;
+    translate: 0 0;
   }
   100% {
-    transform: translateY(-30%);
+    transform-origin: center center;
+    rotate: -90deg;
+    translate: 100% 0;
     opacity: 0;
   }
 }
 
-@keyframes text {
-  0% {
+/* ---------------------------------- text ---------------------------------- */
+@keyframes text-enter {
+  from {
+    translate: 0 30px;
     opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+@keyframes text-out {
+  to {
+    translate: 0 -200%;
+  }
+}
+
+/* --------------------------------- circle --------------------------------- */
+@keyframes circle-enter {
+  from {
+    translate: 0 -30px;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/* --------------------------------- section -------------------------------- */
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
   }
 }
 
-@keyframes textOut {
-  0% {
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
+@keyframes blur {
+  to {
+    filter: blur(10px);
   }
 }

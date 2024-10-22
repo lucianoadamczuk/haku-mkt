@@ -21,10 +21,10 @@
   display: flex;
   background-color: var(--color-light-variant);
   border-radius: 100%;
-  animation: rotate;
+  animation: rotate both;
   animation-timeline: view();
-  animation-range: entry 0 cover 40%;
-  animation-fill-mode: both;
+  animation-range: entry 0 cover 60%;
+  place-self: center;
 }
 
 @keyframes rotate {

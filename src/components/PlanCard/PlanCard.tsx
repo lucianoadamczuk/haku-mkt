@@ -1,14 +1,31 @@
-import { Text } from "@/components";
+"use client";
+import { transformString } from "@/utilities";
 import Image from "next/image";
+import Link from "next/link";
+import Text from "../Text/Text";
 import styles from "./PlanCard.module.css";
 
-export default function PlanCard() {
-  const text =
-    "Realizaremos un análisis profundo del mercado, competidores y audiencia para diseñar una estrategia digital";
-  const japanese = "こんにちは";
-
+/* ----------------------------- card component ----------------------------- */
+interface CardProps {
+  href: string;
+  bgColor: string;
+  title: string;
+  japanese: string;
+  description: string;
+  src: string;
+  alt: string;
+}
+export function PlanCard({
+  href,
+  bgColor,
+  title,
+  japanese,
+  description,
+  src,
+  alt,
+}: CardProps) {
   return (
-    <article className={styles.card}>
+    <Link href={href} className={styles.card}>
       {/* -------------------------------- frontside ------------------------------- */}
       <div className={styles.frontside}>
         {/* circle */}
@@ -18,11 +35,10 @@ export default function PlanCard() {
         <div className={styles.japanese}>
           {japanese.split("").map((item, index) => (
             <Text
-              key={`frontside-letter-${index}`}
+              key={transformString(title + item + index)}
               tag="span"
               size="md"
               family="japanese"
-              color="plan-bushido"
               text={item}
             />
           ))}
@@ -35,25 +51,25 @@ export default function PlanCard() {
             size="xl"
             family="title"
             transform="uppercase"
-            text="Bushido"
+            text={title}
           />
-          <Text tag="p" size="sm" text={text} />
+          <Text tag="p" size="sm" text={description} />
         </div>
 
         {/* background */}
-        <Image
-          src="/assets/images/services/plan-bushido.svg"
-          alt="plan"
-          fill
-          className={styles.background}
-        />
+        <Image src={src} alt={alt} fill className={styles.background} />
       </div>
 
       {/* -------------------------------- backside -------------------------------- */}
-      <div className={styles.backside}>
+      <div
+        className={styles.backside}
+        style={{
+          background: `linear-gradient(to bottom, var(--color-${bgColor}), var(--color-${bgColor}-dark)`,
+        }}
+      >
         {japanese.split("").map((item, index) => (
           <Text
-            key={`backside-letter-${index}`}
+            key={transformString("back" + title + item + index)}
             tag="span"
             size="xl"
             family="japanese"
@@ -62,6 +78,6 @@ export default function PlanCard() {
           />
         ))}
       </div>
-    </article>
+    </Link>
   );
 }

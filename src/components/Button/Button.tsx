@@ -1,5 +1,7 @@
 import Text from "../Text/Text";
 import styles from "./Button.module.css";
+import Link from "next/link";
+
 interface Props {
   type?: "submit" | "button";
   text: string;
@@ -7,7 +9,9 @@ interface Props {
   color?: "primary";
   full?: boolean;
   onClick?: () => void;
+  href?: string;
 }
+
 export default function Button({
   type = "button",
   text,
@@ -15,15 +19,12 @@ export default function Button({
   color = "primary",
   full = false,
   onClick,
+  href,
 }: Props) {
   const longestText = text.length === hoverText.length ? text : hoverText;
 
-  return (
-    <button
-      type={type}
-      className={`${styles.button} ${styles[color]} ${full && styles.full}`}
-      onClick={onClick}
-    >
+  const content = (
+    <>
       <Text
         tag="span"
         family="title"
@@ -46,6 +47,27 @@ export default function Button({
         className={styles.longestText}
         text={longestText}
       />
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={`${styles.button} ${styles[color]} ${full && styles.full}`}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      type={type}
+      className={`${styles.button} ${styles[color]} ${full && styles.full}`}
+      onClick={onClick}
+    >
+      {content}
     </button>
   );
 }

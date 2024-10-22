@@ -19,7 +19,7 @@
     var(--color-primary-variant),
     var(--color-primary)
   );
-  animation: zoomIn forwards;
+  animation: zoomIn both;
   animation-timeline: view();
   animation-range: 0 entry 0 cover;
 }

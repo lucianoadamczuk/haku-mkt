@@ -1,8 +1,7 @@
 .fadeIn {
-  animation: fadeIn ease-out forwards;
+  animation: fadeIn ease-out both;
   animation-timeline: view();
-  animation-range: entry 0 cover 60%;
-  animation-fill-mode: both;
+  animation-range: entry 0 cover 40%;
 }
 
 @keyframes fadeIn {

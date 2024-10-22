@@ -1,27 +1,40 @@
 import { Text } from "@/components";
 import styles from "./Items.module.css";
 import { FadeIn } from "@/animations";
-export default function Items() {
+import { transformString } from "@/utilities";
+
+interface Props {
+  slug: string;
+  items: { title: string; description: string }[];
+}
+export default function Items({ slug, items }: Props) {
   return (
     <section className={styles.section}>
-      {Array.from({ length: 10 }).map((item) => {
+      {items.map((item) => {
+        const key = transformString("item" + item.title);
+        const title = item.title;
+        const description = item.description;
+        const key2 = transformString("empty" + item.title);
         return (
           <>
-            <FadeIn>
+            <FadeIn key={key}>
               <Text
                 tag="h5"
                 size="lg"
                 family="title"
                 transform="uppercase"
-                color="primary"
-                text="Title"
+                color={
+                  slug as
+                    | "plan-sakura"
+                    | "plan-fuji"
+                    | "plan-bushido"
+                    | "plan-tenka"
+                }
+                text={title}
               />
-              <Text
-                tag="p"
-                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti inventore nulla quae fugit. Laboriosam earum, delectus molestiae facere nobis illo odit ipsam placeat deleniti magnam totam a veritatis quia sed."
-              />
+              <Text tag="p" text={description} />
             </FadeIn>
-            <div className={styles.emptyDiv}></div>
+            <div key={key2} className={styles.emptyDiv}></div>
           </>
         );
       })}

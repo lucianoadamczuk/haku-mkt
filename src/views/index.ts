@@ -5,4 +5,5 @@ export { default as Methodology } from "./(dashboard)/home/Methodology/Methodolo
 export { default as Plans } from "./(dashboard)/home/Plans/Plans";
 export { default as HeaderServices } from "./(dashboard)/services/Header/HeaderServices";
 export { default as Items } from "./(dashboard)/services/Items/Items";
+export { default as NotFound } from "./NotFound/NotFound";
 export { default as Intro } from "./intro/Intro";
