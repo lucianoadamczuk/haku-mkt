@@ -1,7 +1,7 @@
 "use client";
 
 import { Text } from "@/components";
-import styles from "./intro.module.css";
+import styles from "./Intro.module.css";
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
