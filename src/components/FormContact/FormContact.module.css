@@ -45,7 +45,7 @@
   height: 120px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1300px) {
   .form {
     display: grid;
     grid-template-columns: 1fr 1fr;

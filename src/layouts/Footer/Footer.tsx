@@ -81,7 +81,7 @@ export default async function Footer({ params }: Props) {
             </a>
           </div>
         </Box>
-        {/* ------------------------------ socialMedia ------------------------------ */}{" "}
+        {/* ------------------------------ socialMedia ------------------------------ */}
         <Box title={socialMedia}>
           <div style={{ display: "flex", gap: "var(--space-sm)" }}>
             <a
