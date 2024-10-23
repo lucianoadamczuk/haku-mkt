@@ -9,7 +9,7 @@
   left: 10px;
   animation: reveal both;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 10% cover 50%;
   color: var(--color-light);
   line-height: normal;
 }

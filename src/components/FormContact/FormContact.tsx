@@ -105,7 +105,11 @@ export default function FormContact({ params }: Props) {
           error={errors.fullName && error}
           labelText="fullName"
         >
-          <input type="text" {...register("fullName", { required: true })} />
+          <input
+            id="fullName"
+            type="text"
+            {...register("fullName", { required: true })}
+          />
         </Box>
 
         {/* --------------------------------- company -------------------------------- */}
@@ -114,7 +118,11 @@ export default function FormContact({ params }: Props) {
           error={errors.company && error}
           labelText="company"
         >
-          <input type="text" {...register("company", { required: true })} />
+          <input
+            id="company"
+            type="text"
+            {...register("company", { required: true })}
+          />
         </Box>
 
         {/* ------------------------------- socialMedia ------------------------------ */}
@@ -125,6 +133,7 @@ export default function FormContact({ params }: Props) {
         >
           <input
             type="text"
+            id="socialMedia"
             {...register("socialMedia", {
               pattern: { value: /^(http|https):\/\//i, message: errorURL },
             })}
@@ -133,7 +142,7 @@ export default function FormContact({ params }: Props) {
 
         {/* --------------------------------- reason --------------------------------- */}
         <Box title={reason.text} labelText="reason">
-          <select {...register("reason")}>
+          <select id="reason" {...register("reason")}>
             {reason.items.map((item: string) => {
               const key = `reason-item-${item}`;
               return (
@@ -147,7 +156,7 @@ export default function FormContact({ params }: Props) {
 
         {/* --------------------------------- comment -------------------------------- */}
         <Box title={comment} labelText="comment">
-          <textarea {...register("comment")}></textarea>
+          <textarea id="comment" {...register("comment")}></textarea>
         </Box>
 
         {/* --------------------------------- button --------------------------------- */}

@@ -35,15 +35,15 @@
       "errorURL": "Formato de URL no válido",
       "btn": "Enviar",
       "btnHover": "¡Vamos!",
-      "messageTemplate": "*¡Hola gente de HAKU!* (-JUMP-)(-JUMP-)👤 *Mi nombre es* {{fullName}}. (-JUMP-)💼 *Trabajo en* {{company}}. (-JUMP-){{socialMedia}} (-JUMP-)*Motivo de la consulta:* {{reason}}. (-JUMP-){{comment}} (-JUMP-)(-JUMP-) *¡Saludos!* ✨"
+      "messageTemplate": "*¡Hola gente de HAKU!* (-JUMP-)(-JUMP-)👤 *Mi nombre es* {{fullName}}. (-JUMP-)💼 *Trabajo en* {{company}}. (-JUMP-){{socialMedia}} (-JUMP-)🧐 *Motivo de la consulta:* {{reason}}. (-JUMP-){{comment}} (-JUMP-)(-JUMP-) *¡Saludos!* ✨"
     }
   },
 
   "footer": {
     "description": "Descripción",
     "contact": "contacto",
-    "socialMedias": "Redes Sociales",
-    "copyright": "HAKU | Todos los derechos reservados"
+    "socialMedia": "Redes Sociales",
+    "copyright": "HAKU © 2024 | Todos los derechos reservados"
   },
 
   "plans": [

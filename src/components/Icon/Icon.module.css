@@ -1,4 +1,9 @@
 .icon {
   width: 35px;
   height: 35px;
+  cursor: pointer;
+}
+
+.icon:active {
+  scale: 0.9;
 }

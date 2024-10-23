@@ -72,9 +72,10 @@
   height: 10px;
   background-color: var(--color-light);
   position: absolute;
-  top: 20%;
+  top: 25%;
   z-index: 4;
   border-radius: 100%;
+  opacity: 40%;
 }
 
 .circleSmall {

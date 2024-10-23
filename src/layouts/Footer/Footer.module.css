@@ -12,6 +12,10 @@
   gap: var(--space-md);
 }
 
+.link:hover {
+  opacity: 0.5;
+}
+
 @media (min-width: 600px) {
   .contentContainer {
     grid-template-columns: 1fr 1fr;

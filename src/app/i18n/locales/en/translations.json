@@ -36,15 +36,15 @@
       "errorURL": "Invalid URL format",
       "btn": "Send",
       "btnHover": "Let's Go!",
-      "messageTemplate": "*Hello HAKU team!* (-JUMP-)(-JUMP-)👤 *My name is* {{fullName}}. (-JUMP-)💼 *I work at* {{company}}. (-JUMP-){{socialMedia}} (-JUMP-)*Reason for inquiry:* {{reason}}. (-JUMP-){{comment}} (-JUMP-)(-JUMP-) *Best regards!* ✨"
+      "messageTemplate": "*Hello HAKU team!* (-JUMP-)(-JUMP-)👤 *My name is* {{fullName}}. (-JUMP-)💼 *I work at* {{company}}. (-JUMP-){{socialMedia}} (-JUMP-)🧐 *Reason for inquiry:* {{reason}}. (-JUMP-){{comment}} (-JUMP-)(-JUMP-) *Best regards!* ✨"
     }
   },
 
   "footer": {
     "description": "Description",
     "contact": "Contact",
-    "socialMedias": "Social Medias",
-    "copyright": "HAKU | All Rights Reserved"
+    "socialMedia": "Social Media",
+    "copyright": "HAKU © 2024 | All Rights Reserved"
   },
 
   "plans": [

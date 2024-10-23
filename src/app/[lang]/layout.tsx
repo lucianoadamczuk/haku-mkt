@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: MetadataProps) {
     },
   ];
   const openGraph = {
+    type: "website",
     images: [
       {
         url: "/assets/images/logo-1200x630.png",
@@ -36,10 +37,10 @@ export async function generateMetadata({ params }: MetadataProps) {
         height: 630,
       },
     ],
-    type: "website",
   };
 
   const twitter = {
+    card: "summary_large_image",
     images: [
       {
         url: "/assets/images/logo-1200x600.png",
@@ -47,9 +48,8 @@ export async function generateMetadata({ params }: MetadataProps) {
         height: 600,
       },
     ],
-
-    card: "summary_large_image",
   };
+
   const robots = {
     index: false,
     follow: true,
@@ -69,21 +69,28 @@ export async function generateMetadata({ params }: MetadataProps) {
 
 /* ------------------------------ fonts import ------------------------------ */
 import localFont from "next/font/local";
+
 const fontTitle = localFont({
   src: "./fonts/Anton-Regular.ttf",
   variable: "--font-family-title",
   display: "swap",
 });
+
 const fontBase = localFont({
   src: "./fonts/NotoSans-Regular.ttf",
   variable: "--font-family-base",
   display: "swap",
 });
+
 const fontJapanese = localFont({
   src: "./fonts/NotoSansJP-Regular.ttf",
   variable: "--font-family-japanese",
   display: "swap",
 });
+
+/* -------------------------------------------------------------------------- */
+/*                               root component                               */
+/* -------------------------------------------------------------------------- */
 
 interface Props {
   params: IParams;

@@ -1,11 +1,10 @@
+import { FadeIn } from "@/animations";
 import { UseTranslation } from "@/app/i18n/server";
 import { Icon, Logo, Text } from "@/components";
 import { PERSONAL_INFO } from "@/constants";
 import { IParams } from "@/typescript";
-import Link from "next/link";
 import { ReactNode } from "react";
 import styles from "./Footer.module.css";
-import { FadeIn } from "@/animations";
 
 interface BoxProps {
   title: string;
@@ -21,7 +20,9 @@ const Box = ({ title, children }: BoxProps) => {
         transform="uppercase"
         text={title}
       />
-      {children}
+      <div style={{ marginTop: "var(--space-sm)", opacity: 0.6 }}>
+        {children}
+      </div>
     </div>
   );
 };
@@ -36,7 +37,7 @@ export default async function Footer({ params }: Props) {
   const description = t("footer.description", { ns: "translations" });
   const metadataDescription = t("metadata.description", { ns: "translations" });
   const contact = t("footer.contact", { ns: "translations" });
-  const socialMedias = t("footer.socialMedias", { ns: "translations" });
+  const socialMedia = t("footer.socialMedia", { ns: "translations" });
   const copyright = t("footer.copyright", { ns: "translations" });
 
   return (
@@ -64,27 +65,46 @@ export default async function Footer({ params }: Props) {
               flexDirection: "column",
             }}
           >
-            <Text
-              tag="small"
-              color="light"
-              size="sm"
-              text="+54 9 11 5337 6931"
-            />
-            <Text tag="small" color="light" size="sm" text="haku@haku.com" />
+            <a
+              href={`https://api.whatsapp.com/send?phone=${PERSONAL_INFO.phone.replace(/\s/g, "").replace("+", "%2B")}`}
+              className={styles.link}
+            >
+              <Text
+                tag="small"
+                color="light"
+                size="sm"
+                text="+54 9 11 5337 6931"
+              />
+            </a>
+            <a href={`mailto:${PERSONAL_INFO.email}`} className={styles.link}>
+              <Text tag="small" color="light" size="sm" text="haku@haku.com" />
+            </a>
           </div>
         </Box>
-        {/* ------------------------------ socialMedias ------------------------------ */}{" "}
-        <Box title={socialMedias}>
+        {/* ------------------------------ socialMedia ------------------------------ */}{" "}
+        <Box title={socialMedia}>
           <div style={{ display: "flex", gap: "var(--space-sm)" }}>
-            <Link href={PERSONAL_INFO.socialMedias.instagram} target="_blank">
+            <a
+              href={PERSONAL_INFO.socialMedia.instagram}
+              target="_blank"
+              className={styles.link}
+            >
               <Icon as="instagram" />
-            </Link>
-            <Link href={PERSONAL_INFO.socialMedias.facebook} target="_blank">
+            </a>
+            <a
+              href={PERSONAL_INFO.socialMedia.facebook}
+              target="_blank"
+              className={styles.link}
+            >
               <Icon as="facebook" />
-            </Link>
-            <Link href={PERSONAL_INFO.socialMedias.linkedIn} target="_blank">
+            </a>
+            <a
+              href={PERSONAL_INFO.socialMedia.linkedIn}
+              target="_blank"
+              className={styles.link}
+            >
               <Icon as="linkedIn" />
-            </Link>
+            </a>
           </div>
         </Box>
         {/* -------------------------------- copyright ------------------------------- */}{" "}
