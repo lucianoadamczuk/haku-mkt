@@ -57,24 +57,22 @@
       "description": "Ideal for those taking their first steps in the digital world",
       "items": [
         {
-          "title": "Platforms",
-          "description": "Instagram, Facebook, and TikTok"
+          "title": "Personal Branding",
+          "description": "Logo and visual design for your brand."
         },
+        { "title": "Platforms", "description": "Instagram, Facebook." },
         {
           "title": "Content",
-          "description": "Focus on hooks that capture attention within the first 3 seconds. Use of viral content to encourage interactions."
+          "description": "4 featured posts, 4 stories, and 4 posts per month."
         },
         {
-          "title": "Acquisition Strategy",
-          "description": "Setup of a low-budget campaign on Facebook/Instagram Ads to drive traffic of interest to the profile."
+          "title": "Lead Strategy",
+          "description": "Social media campaign to attract followers and interested users. You'll stand out."
         },
+        { "title": "Ads", "description": "Ads focused initially on MetaAds." },
         {
-          "title": "Basic Ads",
-          "description": "Low-budget campaign on Facebook/Instagram Ads."
-        },
-        {
-          "title": "Monthly Data Analysis",
-          "description": "Simple report on follower growth, engagement (likes, comments, shares), and basic audience analysis."
+          "title": "Data Analysis",
+          "description": "Biweekly reports on growth, likes, comments, and audience analysis."
         }
       ],
       "alt": "Cherry blossom."
@@ -88,28 +86,25 @@
       "description": "For brands that have already begun their journey and need an additional boost",
       "items": [
         {
-          "title": "Covered Platforms",
-          "description": "Instagram, Facebook, TikTok, LinkedIn"
+          "title": "Personal Branding",
+          "description": "Logo and visual design for your brand."
         },
+        { "title": "Platforms", "description": "Instagram, Facebook." },
         {
           "title": "Content",
-          "description": "20 monthly posts (5 per week), including short videos like reels/TikTok and graphics to increase reach."
+          "description": "4 featured posts, 6 stories, 4 posts per month."
         },
         {
-          "title": "More Advanced Ads",
-          "description": "Retargeting campaigns to maximize conversions from those interacting with organic posts."
+          "title": "Lead Strategy",
+          "description": "Social media campaign to attract users who view your content but aren't clients yet."
         },
         {
-          "title": "Lead Generation",
-          "description": "Use of integrated forms in ads to capture potential client information."
+          "title": "Ads",
+          "description": "More advanced ads with retargeting."
         },
         {
-          "title": "Profile Optimization",
-          "description": "Review and optimization of bios and descriptions to improve the conversion of visitors into followers/clients."
-        },
-        {
-          "title": "More Detailed Monthly Analysis",
-          "description": "Reports with key metrics (CPC, CTR, leads generated) and improvement suggestions."
+          "title": "Data Analysis",
+          "description": "Biweekly reports on key metrics like clicks, cost per click, and generated leads."
         }
       ],
       "alt": "Mount Fuji."
@@ -123,28 +118,22 @@
       "description": "Perfect for those seeking solid market leadership",
       "items": [
         {
-          "title": "Covered Platforms",
-          "description": "Instagram, Facebook, TikTok, LinkedIn, Google Ads."
+          "title": "Personal Branding",
+          "description": "Logo and visual design for your brand."
         },
+        { "title": "Platforms", "description": "Instagram, Facebook." },
         {
           "title": "Content",
-          "description": "25 monthly posts, with a mix of educational content, social proof (testimonials, success stories), and high-impact promotions."
+          "description": "4-6 featured posts, 6 stories, 4 posts, and 1 carousel per month."
         },
         {
-          "title": "Multichannel Ads",
-          "description": "Setup and optimization of remarketing campaigns and ads on Google and social networks focused on conversion and sales closure."
+          "title": "Lead Strategy",
+          "description": "Social media campaign and lead generation for followers who view content but aren't clients yet. Includes automated sales funnels applying urgency and social proof techniques."
         },
+        { "title": "Ads", "description": "Multi-channel ads to close sales." },
         {
-          "title": "Sales Funnel",
-          "description": "Creation and optimization of automatic sales funnels, from lead generation to the final sale, applying scarcity, urgency, and social proof principles."
-        },
-        {
-          "title": "Email Marketing",
-          "description": "Setup of automated sequences to nurture leads, increasing the conversion of those who haven't made a decision yet."
-        },
-        {
-          "title": "Constant Optimization",
-          "description": "Weekly campaign analysis and continuous adjustments to maximize ROI."
+          "title": "Data Analysis",
+          "description": "Biweekly reports to maximize return on investment."
         }
       ],
       "alt": "A samurai."
@@ -158,28 +147,25 @@
       "description": "Designed for those who want to dominate the market",
       "items": [
         {
-          "title": "Covered Platforms",
-          "description": "All of the above, plus YouTube and podcasting to generate industry authority."
+          "title": "Personal Branding",
+          "description": "Logo and visual design for your brand."
         },
+        { "title": "Platforms", "description": "Instagram, Facebook." },
         {
           "title": "Content",
-          "description": "Collaboration with micro-influencers and brand ambassadors to amplify reach."
+          "description": "4-6 featured posts, 8 stories, 4 posts, and 2 carousels per month."
         },
         {
-          "title": "Influence Marketing",
-          "description": "Collaboration with micro-influencers and brand ambassadors to amplify reach."
+          "title": "Lead Strategy",
+          "description": "Social media campaign for followers who view content but aren't clients yet. Includes advanced automated sales funnels with urgency and scarcity techniques."
         },
         {
-          "title": "Aggressive Ad Campaigns",
-          "description": "Significant budget for campaigns across multiple platforms, with constant A/B testing to ensure the most effective creatives are always active."
+          "title": "Ads",
+          "description": "Aggressive campaigns with strong budgets and constant A/B testing."
         },
         {
-          "title": "Sales Funnel Optimization",
-          "description": "Sales funnels with intensive follow-up and multiple touchpoints, from ads to email marketing, webinars, and remarketing."
-        },
-        {
-          "title": "Advanced Data Analysis",
-          "description": "Weekly reports of all metrics, focusing on lifetime value (LTV), customer acquisition cost (CAC), and strategies to improve retention."
+          "title": "Data Analysis",
+          "description": "Weekly reports on all metrics, focusing on customer value and acquisition cost."
         }
       ],
       "alt": "A dragon."

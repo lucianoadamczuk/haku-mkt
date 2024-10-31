@@ -94,6 +94,21 @@
   backface-visibility: hidden;
 }
 
+.circleBack {
+  /*Positioning stuff*/
+  top: var(--space-md);
+  z-index: 1;
+  /*Box model stuff*/
+  width: 10px;
+  max-width: 0 auto;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--color-light-variant);
+  /*Miscellaneous*/
+  box-shadow: inset 1px 1px var(--color-dark);
+  position: absolute;
+}
+
 /* ---------------------------------- hover --------------------------------- */
 .frontside:hover > .background {
   /*Manipulations stuff*/

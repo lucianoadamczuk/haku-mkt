@@ -67,6 +67,9 @@ export function PlanCard({
           background: `linear-gradient(to bottom, var(--color-${bgColor}), var(--color-${bgColor}-dark)`,
         }}
       >
+        {/* circle */}
+        <div className={styles.circleBack}></div>
+
         {japanese.split("").map((item, index) => (
           <Text
             key={transformString("back" + title + item + index)}

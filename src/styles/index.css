@@ -41,6 +41,12 @@
   --space-container-x: 5%;
 }
 
+@media (min-width: 1500px) {
+  :root {
+    --space-container-x: 10%;
+  }
+}
+
 /* --------------------------------- others --------------------------------- */
 :root {
   --rounded-sm: 5px;
