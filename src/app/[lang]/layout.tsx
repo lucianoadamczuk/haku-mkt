@@ -18,52 +18,15 @@ export async function generateMetadata({ params }: MetadataProps) {
   const { t } = await UseTranslation(params.lang);
   const title = t("metadata.title");
   const description = t("metadata.description");
-  const keywords = t("metadata.keywords");
+
   const icons = {
     icon: "/assets/images/logo.png",
-  };
-  const authors = [
-    {
-      name: "Luciano Adamczuk",
-      url: "https://www.linkedin.com/in/luciano-adamczuk-5255431a8/",
-    },
-  ];
-  const openGraph = {
-    type: "website",
-    images: [
-      {
-        url: "/assets/images/logo-1200x630.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
-  };
-
-  const twitter = {
-    card: "summary_large_image",
-    images: [
-      {
-        url: "/assets/images/logo-1200x600.png",
-        width: 1200,
-        height: 600,
-      },
-    ],
-  };
-
-  const robots = {
-    index: false,
-    follow: true,
   };
 
   return {
     title,
     description,
-    keywords,
     icons,
-    authors,
-    openGraph,
-    twitter,
-    robots,
   };
 }
 

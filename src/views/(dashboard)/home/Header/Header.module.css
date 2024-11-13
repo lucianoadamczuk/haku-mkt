@@ -16,7 +16,7 @@
   margin-top: var(--space-lg);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1024px) {
   .header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 70%;
